@@ -70,7 +70,7 @@ type MenuSectionProps = {
 const MenuSection = ({ user }: MenuSectionProps) => {
   const [pageVariables, setPageVariables] = useState([
     {
-      first: 4,
+      first: 2,
       after: null as null | string,
     },
   ]);
@@ -90,7 +90,7 @@ const MenuSection = ({ user }: MenuSectionProps) => {
             variables={variables}
             isLastPage={i === pageVariables.length - 1}
             onLoadMore={(after) =>
-              setPageVariables([...pageVariables, { after, first: 4 }])
+              setPageVariables([...pageVariables, { after, first: 2 }])
             }
           />
         ))}

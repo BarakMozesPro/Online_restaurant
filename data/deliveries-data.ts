@@ -178,3 +178,44 @@ export const DeliveriesData = [
       status: "online"
     },
   ]
+
+
+  // export const DeliveriesData = [
+  //   {
+  //     id: 1,
+  //     order_number: "DPS23062512",
+  //     status: "collected",
+  //     address: "HaYarkon St 205, Tel Aviv-Yafo",
+  //     date: "1/27/2023"
+  //   },
+  //   {
+  //     id: 2,
+  //     order_number: "DPS23062512",
+  //     status: "un
+  // assigned",
+  // address: "Herzl St 10, Jerusalem",
+  // date: "2/1/2023"
+  // },
+  // {
+  // id: 3,
+  // order_number: "DPS23062514",
+  // status: "collected",
+  // address: "Hanassi Blvd 12, Haifa",
+  // date: "8/3/2022"
+  // },
+  // {
+  // id: 4,
+  // order_number: "DPS23062514",
+  // status: "collected",
+  // address: "Derech Menachem Begin 144, Tel Aviv-Yafo",
+  // date: "9/10/2022"
+  // },
+  // {
+  // id: 5,
+  // order_number: "DPS23062512",
+  // status: "unassigned",
+  // address: "Shderot Ben Gurion 32, Be'er Sheva",
+  // date: "8/16/2022"
+  // },
+  // // ... [continue updating the rest of the addresses similarly]
+  // ];

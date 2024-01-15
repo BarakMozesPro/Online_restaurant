@@ -72,7 +72,7 @@ const LocationSearchForm = () => {
   useEffect(() => {
     if (location) {
       // search for place name using mapbox API
-      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location.longitude},${location.latitude}.json?proximity=-33.9249,18.4241&country=ZA&access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`;
+      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location.longitude},${location.latitude}.json?proximity=31.788419,34.761284&country=IL&access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`;
       fetch(endpoint)
         .then((response) => response.json())
         .then((data) => {
@@ -86,7 +86,7 @@ const LocationSearchForm = () => {
   const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     try {
       setQuery(event.target.value);
-      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${event.target.value}.json?proximity=-33.9249,18.4241&country=ZA&access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}&autocomplete=true`;
+      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${event.target.value}.json?proximity=31.788419,34.761284&country=IL&access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}&autocomplete=true`;
 
       const response = await fetch(endpoint);
       const results = await response.json();

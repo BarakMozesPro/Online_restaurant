@@ -40,7 +40,7 @@ export type Menu = {
   category: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   image: Scalars['String']['output'];
-  longDescr: Scalars['String']['output'];
+  longDescr?: Maybe<Scalars['String']['output']>;
   onPromo: Scalars['Boolean']['output'];
   prepType: Array<Scalars['String']['output']>;
   price: Scalars['Float']['output'];
@@ -402,7 +402,7 @@ export type GetMenusQueryVariables = Exact<{
 }>;
 
 
-export type GetMenusQuery = { __typename?: 'Query', getMenus: { __typename?: 'QueryGetMenusConnection', pageInfo: { __typename?: 'PageInfo', endCursor?: string | null, hasNextPage: boolean }, edges: Array<{ __typename?: 'QueryGetMenusConnectionEdge', cursor: string, node: { __typename?: 'Menu', category: string, id: string, image: string, longDescr: string, onPromo: boolean, prepType: Array<string>, price: number, sellingPrice?: number | null, shortDescr: string, title: string } } | null> } };
+export type GetMenusQuery = { __typename?: 'Query', getMenus: { __typename?: 'QueryGetMenusConnection', pageInfo: { __typename?: 'PageInfo', endCursor?: string | null, hasNextPage: boolean }, edges: Array<{ __typename?: 'QueryGetMenusConnectionEdge', cursor: string, node: { __typename?: 'Menu', category: string, id: string, image: string, longDescr?: string | null, onPromo: boolean, prepType: Array<string>, price: number, sellingPrice?: number | null, shortDescr: string, title: string } } | null> } };
 
 export type GetMenuUserFavoritesQueryVariables = Exact<{
   menuIds: Array<Scalars['String']['input']> | Scalars['String']['input'];
@@ -410,7 +410,7 @@ export type GetMenuUserFavoritesQueryVariables = Exact<{
 }>;
 
 
-export type GetMenuUserFavoritesQuery = { __typename?: 'Query', getMenuUserFavorites: Array<{ __typename?: 'Menu', category: string, id: string, image: string, longDescr: string, onPromo: boolean, prepType: Array<string>, price: number, sellingPrice?: number | null, shortDescr: string, title: string }> };
+export type GetMenuUserFavoritesQuery = { __typename?: 'Query', getMenuUserFavorites: Array<{ __typename?: 'Menu', category: string, id: string, image: string, longDescr?: string | null, onPromo: boolean, prepType: Array<string>, price: number, sellingPrice?: number | null, shortDescr: string, title: string }> };
 
 export type GetOrdersQueryVariables = Exact<{
   first?: InputMaybe<Scalars['Int']['input']>;
