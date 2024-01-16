@@ -330,10 +330,12 @@ export enum Role {
 export type User = {
   __typename?: 'User';
   email?: Maybe<Scalars['String']['output']>;
+  favorite?: Maybe<Favorite>;
   id: Scalars['ID']['output'];
   image?: Maybe<Scalars['String']['output']>;
   name?: Maybe<Scalars['String']['output']>;
   order?: Maybe<Array<Order>>;
+  profile?: Maybe<Profile>;
   role: Role;
 };
 

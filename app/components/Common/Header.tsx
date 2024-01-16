@@ -11,7 +11,7 @@ type HeaderProps = {
 }
 
 const Header = ({user}:HeaderProps) => {
-
+// console.log(user);
   const {onOpen} = useLoginModal()
   const { menus } = useCartStore();
 

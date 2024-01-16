@@ -20,14 +20,15 @@ export async function createContext({ req }: { req: NextRequest }) {
 
 
   // Disable this function when testing in Apollo SandBox
-  // if (!validateGraphApiKey(req)) {
-  //   throw new Error("Unauthorized: No Access"); // Throw an error if API key validation fails
-  // }
+  if (!validateGraphApiKey(req)) {
+    throw new Error("Unauthorized: No Access"); // Throw an error if API key validation fails
+  }
 
   const session = await getServerSession(authOptions);
 
   // if the user is not logged in, return an empty object
   if (!session || typeof session === "undefined") return {};
   const { user } = session;
+  console.log(user);
   return { user };
 }
