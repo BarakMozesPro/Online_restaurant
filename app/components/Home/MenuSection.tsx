@@ -1,6 +1,6 @@
 'use client'
 
-import { MenuData } from '@/data/menu-data'
+// import { MenuData } from '@/data/menu-data'
 import React, { Suspense, useState } from 'react'
 import MenuModal from './MenuModal'
 import { GetMenusDocument, GetMenusQuery, GetMenusQueryVariables } from '@/graphql/generated'
@@ -46,7 +46,7 @@ const FetchedMenus = ({ variables, isLastPage, onLoadMore, user}: FetchedMenuPro
                 user={user as User}
               />
             ))}
-          </div>
+          </div>      
           {isLastPage && hasNextPage  && (
             <button
               onClick={() => onLoadMore(endCursor as string)}
@@ -70,7 +70,7 @@ type MenuSectionProps = {
 const MenuSection = ({ user }: MenuSectionProps) => {
   const [pageVariables, setPageVariables] = useState([
     {
-      first: 2,
+      first: 4,
       after: null as null | string,
     },
   ]);
@@ -90,7 +90,7 @@ const MenuSection = ({ user }: MenuSectionProps) => {
             variables={variables}
             isLastPage={i === pageVariables.length - 1}
             onLoadMore={(after) =>
-              setPageVariables([...pageVariables, { after, first: 2 }])
+              setPageVariables([...pageVariables, { after, first: 4 }])
             }
           />
         ))}

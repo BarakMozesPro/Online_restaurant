@@ -17,7 +17,7 @@ type Props = {
 const UserEditAccountModal = ({ user, profile}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [phone, setPhone] = useState(profile?.phone);
-  // const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("");
   const closeModal = () => setIsOpen(false);
   const OpenModal = () => setIsOpen(true);
 
@@ -62,7 +62,7 @@ const UserEditAccountModal = ({ user, profile}: Props) => {
               />
             </div>
 
-            {/* <div className="">
+            <div className="">
               <label htmlFor="email" className="form-label">
                 Name
               </label>
@@ -71,7 +71,7 @@ const UserEditAccountModal = ({ user, profile}: Props) => {
                 placeholder="Name"
                 onChange={(e) => setUserName(e.target.value)}
               />
-            </div> */}
+            </div>
           </div>
 
           <button

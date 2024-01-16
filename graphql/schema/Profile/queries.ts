@@ -20,7 +20,7 @@ builder.queryFields((t) => ({
     },
     resolve: async (query, _, args, context) => {
       const isLoggedIn = !(await context).user;
-      if (isLoggedIn) {
+      if (!isLoggedIn) {
         throw new GraphQLError("You must be logged in  to perform this action");
       }
       const profile = await prisma.profile.findUniqueOrThrow({

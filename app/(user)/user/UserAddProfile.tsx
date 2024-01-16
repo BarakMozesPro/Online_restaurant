@@ -21,7 +21,7 @@ type Props = {
 const UserAddProfile = ({ user }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [phone, setPhone] = useState("");
-  //   const [userName, setUserName] = useState("");
+    const [userName, setUserName] = useState("");
   const closeModal = () => setIsOpen(false);
   const OpenModal = () => setIsOpen(true);
   const router = useRouter();
@@ -72,7 +72,7 @@ const UserAddProfile = ({ user }: Props) => {
               />
             </div>
 
-            {/* <div className="">
+            <div className="">
               <label htmlFor="email" className="form-label">
                 Name
               </label>
@@ -81,7 +81,7 @@ const UserAddProfile = ({ user }: Props) => {
                 placeholder="Name"
                 onChange={(e) => setUserName(e.target.value)}
               />
-            </div> */}
+            </div>
           </div>
 
           <button
